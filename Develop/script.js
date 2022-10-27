@@ -10,7 +10,12 @@ function writePassword() {
 
 }
 
-// In the lower variable, a function is added to write the password
+// In in bottom before adding and changing
+// Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
+
+
+// In the bottom variable, a function is added to write the password
 function generatePassword() {
   
   var userOptions = {
