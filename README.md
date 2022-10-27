@@ -42,4 +42,4 @@ The following image shows the web application's appearance and functionality:
 
 ## License 
 - - -
-AA
+© 2022 AA
