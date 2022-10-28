@@ -31,6 +31,10 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
+## Link of the password
+
+<a href="https://amarfiguig.github.io/03-JavaScript/">Link of Password</a>
+
 ## Work Pic
 
 The following image shows the web application's appearance and functionality:
