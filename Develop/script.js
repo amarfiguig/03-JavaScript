@@ -1,7 +1,7 @@
-// Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -10,12 +10,7 @@ function writePassword() {
 
 }
 
-// In in bottom before adding and changing
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
 
-
-// In the bottom variable, a function is added to write the password
 function generatePassword() {
   
   var userOptions = {
@@ -26,7 +21,7 @@ function generatePassword() {
     numbers: false
   }
   
-//The user will have to follow the instructions and directions in order to enter the password according to the requirements of the site, and alerts will be sent such as changing the password, its number, and so on.
+  
   
   var passwordLength = window.prompt("Do you need help for creating a password?");
   
