@@ -10,17 +10,16 @@ function writePassword() {
 
 }
 
-
 // In the lower variable, a function is added to write the password
 function generatePassword() {
 
     
-  var userOptions = {
+  var features = {
     Codeproperties: 0,
     lowoperties: false,
     uppoperties: false,
     spcoperties: false,
-    numoperties: false
+    numoperties: false,
   }
     
     var PWlength 
@@ -46,10 +45,10 @@ function generatePassword() {
 
      PWLength = window.prompt("Are you having trouble creating your password?");
   
-     featureslow lowoperties = windows confirm("Please can you add lower")
-     featuresupp lowoperties = windows confirm("Please can you add Upper")
-     featuresnum lowoperties = windows confirm("Please can you add Number")
-     featuresspc lowoperties = windows confirm("Please can you add special")
+     features.lowoperties = windows = confirm("Please can you add lower")
+     features.uppoperties = windows = confirm("Please can you add Upper")
+     features.numoperties = windows = confirm("Please can you add Number")
+     features.spcoperties = windows = confirm("Please can you add special")
 
         if (!featureslow && !featuresupp && !featuresnum && !featuresspc) {
     window.alert("Please add one criteria!");
@@ -69,8 +68,7 @@ function generatePassword() {
   }
         
 // Add alert for choise more of criterial and return for strat again if orders are not followed 
-  
-  
+
 var Passacte = []
   for (var i=0; i < PWLength; i++) {
   var randomIndex = Math.floor(Math.random() * Codeproperties.length);
@@ -79,7 +77,5 @@ var Passacte = []
 
 return(Passacte.join(''));
 }
-
-// button
 
 generateBtn.addEventListener("click", writePassword);
