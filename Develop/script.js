@@ -36,12 +36,12 @@ function generatePassword() {
     
   
     if (isNaN (features.passwordlength)) {
-    window.alert("Please enter a valid number between 6-20");
+    window.alert("Please enter a valid number between 8-128");
     return;
   }
   
   if (features.passwordlength<6 ||features.passwordlength>20) { 
-   window.alert("you must choose a password between 6 - 20 characters");
+   window.alert("you must choose a password between 8 - 128 characters");
     return;
    }
   
