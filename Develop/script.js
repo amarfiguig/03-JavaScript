@@ -1,7 +1,7 @@
-
+// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
+// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -11,77 +11,73 @@ function writePassword() {
 }
 
 
+// In the lower variable, a function is added to write the password
 function generatePassword() {
-  
+
+    
   var userOptions = {
-    numberOfChars: 0,
-    lowerCase: false,
-    upperCase: false,
-    specialChar: false,
-    numbers: false
+    Codeproperties: 0,
+    lowoperties: false,
+    uppoperties: false,
+    spcoperties: false,
+    numoperties: false
   }
-  
-  
-  
-  var passwordLength = window.prompt("Do you need help for creating a password?");
-  
-  if (isNaN (passwordLength)) {
+    
+    var PWlength 
+        
+// This is the character list number or spicial ... " + low)
+      
+    var low = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var upp = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    var num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var spc = ["!","(", ")", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~","£", "$"];
+    
+    features.Codeproperties = PWLength
+    
+    if (isNaN (PWlength)) {
     window.alert("Please enter a valid number between 6-20");
     return;
   }
-
-  else if (passwordLength<6 || passwordLength>20) { 
-   window.alert("you must choose a password length between 6 - 20 characters");
+  
+  else if (PWLength<6 || PWLength>20) { 
+   window.alert("you must choose a password between 6 - 20 characters");
     return;
    }
+
+     PWLength = window.prompt("Are you having trouble creating your password?");
   
-  userOptions.numberOfChars = passwordLength
+     featureslow lowoperties = windows confirm("Please can you add lower")
+     featuresupp lowoperties = windows confirm("Please can you add Upper")
+     featuresnum lowoperties = windows confirm("Please can you add Number")
+     featuresspc lowoperties = windows confirm("Please can you add special")
 
-  userOptions.lowerCase = window.confirm("Please can you add lower case characters?");
-  userOptions.upperCase = window.confirm("Please can you add UPPER case characters?");
-  userOptions.specialChar = window.confirm("Please can you add special characters?");
-  userOptions.numbers = window.confirm("Please can you add numbers?");
-
-  // the available charaters 
+        if (!featureslow && !featuresupp && !featuresnum && !featuresspc) {
+    window.alert("Please add one criteria!");
+    return;
+  }
+        if (featureslow) {
+    Codeproperties = Codeproperties.concat(low);
+  }
+        if (featuresupp) {
+    Codeproperties = Codeproperties.concat(upp);
+  }
+        if (featuresnum) {
+    Codeproperties = Codeproperties.concat(num);
+  }
+        if (featuresspc) {
+    Codeproperties = Codeproperties.concat(spc);
+  }
+        
+// Add alert for choise more of criterial and return for strat again if orders are not followed 
   
-const charLower = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-const charUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-const charSpec = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"];
-const charNumber = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-
-var charList = [];
-
-if (userOptions.lowerCase){
-  charLower.forEach(element => charList.push(element));
-  console.log(charList);
-}
-
-
-if(userOptions.upperCase) {
-  charUpper.forEach(element => charList.push(element));
-  console.log(charList);
-}
-
-if(userOptions.specialChar){
-  charSpec.forEach(element => charList.push(element));
-  console.log(charList);
-}
-
-
-if(userOptions.numbers){
-  charNumber.forEach(element => charList.push(element));
-  console.log(charList);
-}
-
-
-var passwordMake = []
-  for (var i=0; i < userOptions.numberOfChars; i++) {
-  var randomIndex = Math.floor(Math.random() * charList.length);
-   passwordMake.push(charList[randomIndex]);
+  
+var Passacte = []
+  for (var i=0; i < PWLength; i++) {
+  var randomIndex = Math.floor(Math.random() * Codeproperties.length);
+   Passacte.push(Codeproperties[randomIndex]);
   }
 
-return(passwordMake.join(''));
-
+return(Passacte.join(''));
 }
 
 // button
