@@ -15,14 +15,15 @@ function generatePassword() {
 
     
   var features = {
-    Codeproperties: 0,
+    passwordlength: 0,
     lowoperties: false,
     uppoperties: false,
     spcoperties: false,
     numoperties: false,
   }
     
-    var PWlength 
+  var characters = []
+
         
 // This is the character list number or spicial ... " + low)
       
@@ -31,51 +32,52 @@ function generatePassword() {
     var num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     var spc = ["!","(", ")", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~","£", "$"];
     
-    features.Codeproperties = PWLength
+  features.passwordlength = window.prompt('how long do you want passwor to be ?')
     
-    if (isNaN (PWlength)) {
+  
+    if (isNaN (features.passwordlength)) {
     window.alert("Please enter a valid number between 6-20");
     return;
   }
   
-  else if (PWLength<6 || PWLength>20) { 
+  if (features.passwordlength<6 ||features.passwordlength>20) { 
    window.alert("you must choose a password between 6 - 20 characters");
     return;
    }
-
-     PWLength = window.prompt("Are you having trouble creating your password?");
   
-     features.lowoperties = windows = confirm("Please can you add lower")
-     features.uppoperties = windows = confirm("Please can you add Upper")
-     features.numoperties = windows = confirm("Please can you add Number")
-     features.spcoperties = windows = confirm("Please can you add special")
+     features.lowoperties = window.confirm("Please can you add lower")
+     features.uppoperties = window.confirm("Please can you add Upper")
+     features.numoperties = window.confirm("Please can you add Number")
+     features.spcoperties = window.confirm("Please can you add special")
 
-        if (!featureslow && !featuresupp && !featuresnum && !featuresspc) {
+        if (!features.lowoperties && !features.numoperties && !features.spcoperties && !features.uppoperties) {
     window.alert("Please add one criteria!");
     return;
   }
-        if (featureslow) {
-    Codeproperties = Codeproperties.concat(low);
+        if (features.lowoperties) {
+    characters = characters.concat(low);
   }
-        if (featuresupp) {
-    Codeproperties = Codeproperties.concat(upp);
+        if (feature.uppoperties) {
+    characters = characters.concat(upp);
   }
-        if (featuresnum) {
-    Codeproperties = Codeproperties.concat(num);
+        if (feature.numoperties) {
+    characters = characters.concat(num);
   }
-        if (featuresspc) {
-    Codeproperties = Codeproperties.concat(spc);
+        if (features.spcoperties) {
+    characters = characters.concat(spc);
   }
         
 // Add alert for choise more of criterial and return for strat again if orders are not followed 
 
 var Passacte = []
-  for (var i=0; i < PWLength; i++) {
-  var randomIndex = Math.floor(Math.random() * Codeproperties.length);
-   Passacte.push(Codeproperties[randomIndex]);
+  for (var i=0; i < features.passwordlength; i++) {
+  var randomIndex = Math.floor(Math.random() * characters.length);
+   Passacte.push(characters[randomIndex]);
   }
 
 return(Passacte.join(''));
 }
+
+// button
 
 generateBtn.addEventListener("click", writePassword);
