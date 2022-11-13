@@ -40,7 +40,7 @@ function generatePassword() {
     return;
   }
   
-  if (features.passwordlength<6 ||features.passwordlength>20) { 
+  if (features.passwordlength<8 ||features.passwordlength>128) { 
    window.alert("you must choose a password between 8 - 128 characters");
     return;
    }
@@ -57,10 +57,10 @@ function generatePassword() {
         if (features.lowoperties) {
     characters = characters.concat(low);
   }
-        if (feature.uppoperties) {
+        if (features.uppoperties) {
     characters = characters.concat(upp);
   }
-        if (feature.numoperties) {
+        if (features.numoperties) {
     characters = characters.concat(num);
   }
         if (features.spcoperties) {
